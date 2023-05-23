@@ -60,7 +60,7 @@ def resolver(researcher_response, response_1, response_2, response_3):
 
 You'll need the following to run Researcher Resolver:
 
-- Python 3.6 or above
+- Python 3.6 or above (Tested on 3.11)
 - Jupyter Lab or Jupyter Notebook
 
 ### Installation
@@ -69,7 +69,7 @@ Install the OpenAI Python package:
 
 - `pip install openai`
 
-You'll also need to create a `.env` file in your project root with your OpenAI API key in the format `OPENAI_API_KEY=`:
+You'll also need to create a `.env` file in your project root with your OpenAI API key in the format `OPENAI_API_KEY=`
 
 ## Usage
 
@@ -86,7 +86,6 @@ This approach has a few limitations:
 - When dealing with long queries and/or long responses, asking the question a single time is preferable to this approach, which would exceed context limits earlier.
 - **Time:** Our approach requires more time to execute due to additional API calls.
 - **Compatibility:** The prompt engineering techniques we use are not as effective with smaller or non-instruction-tuned models.
-- **API Errors:** We occasionally encounter `bad gateway` errors when making concurrent requests.
 
 ## When is this useful ?
 
@@ -97,7 +96,6 @@ This approach has a few limitations:
 ## Future Directions
 
 - Researcher Resolver
-    - Error handling and retries for the API requests.
     - Asking each question from a different viewpoint to generate diverse answers.
         - scientist
         - researcher
